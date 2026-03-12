@@ -179,29 +179,31 @@
     font-weight: 600;
 }
         /* Contacto */
-      .contact-box {
-					background: #002244;
-					color: white;
-					padding: 3rem;
-					border-radius: 15px;
-					display: flex;
-					flex-wrap: wrap;
-					gap: 30px;
-					justify-content: space-between;
-					align-items: center;
-				}
-				
-				
-				.contact-info {
-					max-width: 100%;
-				}
+.contact-box {
+    background: #002244;
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
 
-				.contact-info p {
-					font-size: 1.1rem;
-					margin: 10px 0;
-					word-break: break-word;
-					overflow-wrap: break-word;
-				}
+.contact-info {
+    flex: 1 1 350px;
+    min-width: 0; /* CLAVE para móviles */
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
 
    
 
@@ -211,8 +213,27 @@
             background: #f4f4f4;
             font-size: 0.9rem;
         }
+		
+		@media (max-width: 768px) {
 
-    @media (max-width: 768px) {
+    .contact-box {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    .qr-box img {
+        max-width: 160px;
+    }
+
+}
+
+ <!--  @media (max-width: 768px) {
+	
 	   
 
     nav {
@@ -257,26 +278,23 @@
     }
 	
 	
-	
-	   .contact-box {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 30px 20px;
-    }
 
-    .contact-info {
-        width: 100%;
-    }
 
-    .qr-box img {
-        width: 160px;
-        max-width: 80%;
-    }
+.qr-box {
+    flex: 0 1 220px;
+    text-align: center;
+}
+
+.qr-box img {
+    width: 100%;
+    max-width: 200px;
+}
+
+
 
 
  
-}
+}-->
 		 .qr-box img { width: 100px; background: white; padding: 10px; border-radius: 10px; }
 		 .about-img img { width: 70%; max-width: 250px; border-radius: 15px; border-bottom: 8px solid var(--verde-logo); transform: rotate(90deg); }
 		 .whatsapp-float{
